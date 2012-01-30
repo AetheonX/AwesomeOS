@@ -1,0 +1,9 @@
+.\FLASH\process.o: src\process.c
+.\FLASH\process.o: C:\Development\Keil\ARM\Inc\NXP\LPC17xx\LPC17xx.h
+.\FLASH\process.o: C:\Development\Keil\ARM\CMSIS\Include\core_cm3.h
+.\FLASH\process.o: C:\Development\Keil\ARM\RV31\Inc\stdint.h
+.\FLASH\process.o: C:\Development\Keil\ARM\CMSIS\Include\core_cmInstr.h
+.\FLASH\process.o: C:\Development\Keil\ARM\CMSIS\Include\core_cmFunc.h
+.\FLASH\process.o: C:\Development\Keil\ARM\Inc\NXP\LPC17xx\system_LPC17xx.h
+.\FLASH\process.o: src\uart_polling.h
+.\FLASH\process.o: src\process.h
