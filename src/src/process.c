@@ -140,7 +140,9 @@ int k_release_processor(void)
 }
 
 int k_set_process_priority(int process_ID, int priority) {
-	// TODO: Error checking here...
+	// Restrictions - processID cannot be 0, processID has to be the same as the running process, priority level has to be between 0 and 3 (inclusively)
+	if (process_ID == 0 || gp_current_process->m_pid != process_ID || priority < 0 || priority > 3)
+		return -1; // -1 Error code
 
 	pcb[process_ID].m_ppriority = priority;
 
@@ -148,7 +150,9 @@ int k_set_process_priority(int process_ID, int priority) {
 }
 
 int k_get_process_priority (int process_ID) {
-	// TODO: Error checking here...
+	// Restrictions - processID cannot be less than zero and greater than the last process in the system (assuming all processIDs get assigned sequentially)
+	if (process_ID < 0 || process_ID >= PNUM)
+		return -1; // -1 Error code
 
  	return pcb[process_ID].m_ppriority; 
 }
