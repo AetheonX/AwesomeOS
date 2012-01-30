@@ -72,7 +72,7 @@ void proc3(void) {
 }
 
 void proc4(void) {
-	// TESTING PRIORITY LEVEL SETTER
+	// TESTING PRIORITY LEVEL SETTER - CORRECT USAGE
 	while (1) {
 		int result;
 		result = 1;
@@ -80,6 +80,7 @@ void proc4(void) {
 		set_process_priority(4,2);
 		if (get_process_priority(4) != 2)
 			result = 0;
+		set_process_priority(4,3);
 
 		uart0_put_string("G021_test: test 4 ");
 		if (result == 0)
@@ -93,9 +94,24 @@ void proc4(void) {
 }
 
 void proc5(void) {
-	// TEST CASE HERE!
-	while (1)
+	// TESTING PRIORITY LEVEL SETTER - SETTING PRIORITY OF ANOTHER PROCESS - FAILS
+	while (1) {
+		int result;
+		result = 1;
+
+		set_process_priority(4,2);
+		if (get_process_priority(4) != 2)
+			result = 0;
+
+		uart0_put_string("G021_test: test 5 ");
+		if (result == 0)
+			uart0_put_string("FAIL");
+		else
+			uart0_put_string("OK");
+		uart0_put_string("\n\r");
+
 		release_processor();
+	}
 }
 
 void proc6(void) {
