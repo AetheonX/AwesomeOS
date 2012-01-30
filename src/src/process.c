@@ -50,7 +50,7 @@ void process_init()
 		pcb_t pcb_c 		= pcb[pid];
 		pcb_c.m_pid 		= pid;
 		pcb_c.m_state 		= NEW;
-		pcb_c.m_ppriority 	= 3;
+		pcb_c.m_ppriority 	= ((pid == 0)?4:3);
 	
 		sp = pstack[pid] + USR_SZ_STACK;
 	    
