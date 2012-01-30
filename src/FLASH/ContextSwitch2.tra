@@ -17,7 +17,7 @@
 ### ADS-LD Output File: '.\FLASH\ContextSwitch2.axf'
 ### ADS-LD Command File: '.\FLASH\ContextSwitch2.lnp'
 ### Checking for dirty Components...
-### Creating CmdFile '.\FLASH\ContextSwitch2.lnp', Handle=0x0000035C
+### Creating CmdFile '.\FLASH\ContextSwitch2.lnp', Handle=0x00000884
 ### Writing '.lnp' file
 ### ADS-LD Command file '.\FLASH\ContextSwitch2.lnp' is ready.
 ### ADS-LD: About to start ADS-LD Thread.
