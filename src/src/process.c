@@ -36,6 +36,7 @@ void process_init()
 	uint32_t * sp;
 	int pid = 0;
 
+	// Init all the system processes' entry points here
 	pcb[0].m_proc = &proc0;
 	pcb[1].m_proc = &proc1;
 	pcb[2].m_proc = &proc2;
@@ -89,6 +90,7 @@ int scheduler(void)
 	if (pid < 0)
 		return -1; // error code -1
 	
+	// Round-robin approach
 	return pid % (PNUM - 1) + 1;
 }
 /**

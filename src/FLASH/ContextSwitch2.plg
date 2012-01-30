@@ -4,241 +4,41 @@
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
 D:\Dev\OS\src\ContextSwitch2.uvproj
-Project File Date:  01/18/2012
+Project File Date:  01/30/2012
 
 <h2>Output:</h2>
-Build target 'ContextSwitch2 SIM'
-compiling usr_proc.c...
-linking...
-Program Size: Code=1972 RO-data=236 RW-data=8 ZI-data=2208  
-".\FLASH\ContextSwitch2.axf" - 0 Error(s), 0 Warning(s).
-Build target 'ContextSwitch2 SIM'
-compiling main_svc.c...
-compiling usr_proc.c...
-linking...
-Program Size: Code=1972 RO-data=236 RW-data=8 ZI-data=2208  
-".\FLASH\ContextSwitch2.axf" - 0 Error(s), 0 Warning(s).
-Build target 'ContextSwitch2 SIM'
-compiling main_svc.c...
-compiling usr_proc.c...
-linking...
-Program Size: Code=1972 RO-data=236 RW-data=8 ZI-data=2208  
-".\FLASH\ContextSwitch2.axf" - 0 Error(s), 0 Warning(s).
-Build target 'ContextSwitch2 SIM'
-compiling usr_proc.c...
-linking...
-Program Size: Code=2048 RO-data=236 RW-data=8 ZI-data=2208  
-".\FLASH\ContextSwitch2.axf" - 0 Error(s), 0 Warning(s).
-Build target 'ContextSwitch2 SIM'
-compiling usr_proc.c...
-linking...
-Program Size: Code=2056 RO-data=236 RW-data=8 ZI-data=2208  
-".\FLASH\ContextSwitch2.axf" - 0 Error(s), 0 Warning(s).
-Build target 'ContextSwitch2 SIM'
-compiling usr_proc.c...
-linking...
-Program Size: Code=1968 RO-data=236 RW-data=8 ZI-data=2208  
-".\FLASH\ContextSwitch2.axf" - 0 Error(s), 0 Warning(s).
-Build target 'ContextSwitch2 SIM'
-linking...
-Program Size: Code=1968 RO-data=236 RW-data=8 ZI-data=2208  
-".\FLASH\ContextSwitch2.axf" - 0 Error(s), 0 Warning(s).
 Build target 'AwesomeOS SIM'
+compiling process.c...
+linking...
+Program Size: Code=2008 RO-data=236 RW-data=8 ZI-data=4336  
+".\FLASH\ContextSwitch2.axf" - 0 Error(s), 0 Warning(s).
+Clean started: Project: 'ContextSwitch2'
+   deleting intermediate output files for target 'AwesomeOS SIM'
+   deleting intermediate output files for target 'AwesomeOS RAM'
+Rebuild target 'AwesomeOS SIM'
+assembling startup_LPC17xx.s...
 compiling system_LPC17xx.c...
+compiling HAL.c...
 compiling main_svc.c...
 compiling process.c...
 compiling Retarget.c...
 compiling uart_polling.c...
 compiling usr_proc.c...
 linking...
-Program Size: Code=1968 RO-data=236 RW-data=8 ZI-data=2208  
+Program Size: Code=2008 RO-data=236 RW-data=8 ZI-data=4336  
 ".\FLASH\ContextSwitch2.axf" - 0 Error(s), 0 Warning(s).
-Build target 'AwesomeOS SIM'
-compiling process.c...
-linking...
-Program Size: Code=1968 RO-data=236 RW-data=8 ZI-data=2208  
-".\FLASH\ContextSwitch2.axf" - 0 Error(s), 0 Warning(s).
-Build target 'AwesomeOS SIM'
-compiling process.c...
-linking...
-Program Size: Code=1964 RO-data=236 RW-data=8 ZI-data=2208  
-".\FLASH\ContextSwitch2.axf" - 0 Error(s), 0 Warning(s).
-Build target 'AwesomeOS SIM'
-compiling process.c...
-linking...
-Program Size: Code=1968 RO-data=236 RW-data=8 ZI-data=2208  
-".\FLASH\ContextSwitch2.axf" - 0 Error(s), 0 Warning(s).
-Build target 'AwesomeOS SIM'
-compiling usr_proc.c...
-src\usr_proc.c(76): warning:  #260-D: explicit type is missing ("int" assumed)
-src\usr_proc.c(78): error:  #757: variable "proc_routine_t" is not a type name
-src\usr_proc.c(80): warning:  #1-D: last line of file ends without a newline
-src\usr_proc.c(80): error:  #94-D: the size of an array must be greater than zero
-src\usr_proc.c(80): error:  #77-D: this declaration has no storage class or type specifier
-src\usr_proc.c(80): warning:  #520-D: initialization with "{...}" expected for aggregate object
-Target not created
-Build target 'AwesomeOS SIM'
-compiling usr_proc.c...
-src\usr_proc.c(76): warning:  #260-D: explicit type is missing ("int" assumed)
-src\usr_proc.c(78): error:  #757: variable "proc_routine_t" is not a type name
-src\usr_proc.c(80): error:  #94-D: the size of an array must be greater than zero
-src\usr_proc.c(80): error:  #77-D: this declaration has no storage class or type specifier
-src\usr_proc.c(80): warning:  #520-D: initialization with "{...}" expected for aggregate object
-Target not created
-Build target 'AwesomeOS SIM'
-compiling usr_proc.c...
-src\usr_proc.c(76): error:  #81: more than one storage class may not be specified
-src\usr_proc.c(76): warning:  #260-D: explicit type is missing ("int" assumed)
-src\usr_proc.c(78): error:  #757: variable "proc_routine_t" is not a type name
-src\usr_proc.c(80): error:  #94-D: the size of an array must be greater than zero
-src\usr_proc.c(80): error:  #77-D: this declaration has no storage class or type specifier
-src\usr_proc.c(80): warning:  #520-D: initialization with "{...}" expected for aggregate object
-Target not created
-Build target 'AwesomeOS SIM'
-compiling usr_proc.c...
-src\usr_proc.c(80): error:  #94-D: the size of an array must be greater than zero
-src\usr_proc.c(80): error:  #77-D: this declaration has no storage class or type specifier
-src\usr_proc.c(80): error:  #147: declaration is incompatible with "proc_routine_t pinit_table[7]" (declared at line 78)
-src\usr_proc.c(80): warning:  #520-D: initialization with "{...}" expected for aggregate object
-src\usr_proc.c(80): error:  #146: too many initializer values
-Target not created
-Build target 'AwesomeOS SIM'
-compiling usr_proc.c...
-src\usr_proc.c(80): error:  #94-D: the size of an array must be greater than zero
-src\usr_proc.c(80): error:  #77-D: this declaration has no storage class or type specifier
-src\usr_proc.c(80): error:  #147: declaration is incompatible with "proc_routine_t pinit_table[7]" (declared at line 78)
-src\usr_proc.c(80): warning:  #520-D: initialization with "{...}" expected for aggregate object
-src\usr_proc.c(80): error:  #146: too many initializer values
-Target not created
-Build target 'AwesomeOS SIM'
-compiling usr_proc.c...
-linking...
-Program Size: Code=1968 RO-data=236 RW-data=8 ZI-data=2208  
-".\FLASH\ContextSwitch2.axf" - 0 Error(s), 0 Warning(s).
-Build target 'AwesomeOS SIM'
-compiling usr_proc.c...
-src\usr_proc.c(81): warning:  #1-D: last line of file ends without a newline
-src\usr_proc.c(81): warning:  #940-D: missing return statement at end of non-void function "tess"
-src\usr_proc.c(78): warning:  #550-D: variable "pinit_table" was set but never used
-linking...
-Program Size: Code=1980 RO-data=236 RW-data=8 ZI-data=2208  
-".\FLASH\ContextSwitch2.axf" - 0 Error(s), 3 Warning(s).
-Build target 'AwesomeOS SIM'
-compiling usr_proc.c...
-src\usr_proc.c(81): warning:  #940-D: missing return statement at end of non-void function "tess"
-src\usr_proc.c(78): warning:  #550-D: variable "pinit_table" was set but never used
-linking...
-Program Size: Code=1980 RO-data=236 RW-data=8 ZI-data=2208  
-".\FLASH\ContextSwitch2.axf" - 0 Error(s), 2 Warning(s).
-Build target 'AwesomeOS SIM'
-compiling process.c...
-src\process.c(26): error:  #94-D: the size of an array must be greater than zero
-src\process.c(26): error:  #77-D: this declaration has no storage class or type specifier
-src\process.c(26): error:  #147: declaration is incompatible with "pcb_t pcb[3]" (declared at line 55 of "src\process.h")
-src\process.c(26): error:  #65: expected a ";"
-src\process.c(27): error:  #77-D: this declaration has no storage class or type specifier
-src\process.c(27): error:  #65: expected a ";"
-src\process.c(28): error:  #77-D: this declaration has no storage class or type specifier
-src\process.c(28): error:  #147: declaration is incompatible with "int pcb[1]" (declared at line 26)
-src\process.c(28): error:  #65: expected a ";"
-src\process.c(44): error:  #144: a value of type "int" cannot be used to initialize an entity of type "pcb_t"
-src\process.c(63): error:  #513: a value of type "pcb_t" cannot be assigned to an entity of type "int"
-src\process.c(78): error:  #513: a value of type "int *" cannot be assigned to an entity of type "pcb_t *"
-src\process.c(110): error:  #513: a value of type "int *" cannot be assigned to an entity of type "pcb_t *"
-src\process.c(138): error:  #154: expression must have struct or union type
-src\process.c(146): error:  #154: expression must have struct or union type
-Target not created
-Build target 'AwesomeOS SIM'
-compiling process.c...
-compiling usr_proc.c...
-src\usr_proc.c(74): error:  #40: expected an identifier
-src\usr_proc.c(74): error:  #65: expected a ";"
-src\usr_proc.c(76): warning: At end of source:  #12-D: parsing restarts here after previous syntax error
-Target not created
-Build target 'AwesomeOS SIM'
-compiling usr_proc.c...
-src\usr_proc.c(74): error:  #40: expected an identifier
-src\usr_proc.c(74): error:  #79: expected a type specifier
-src\usr_proc.c(74): error:  #90: function returning function is not allowed
-src\usr_proc.c(74): error:  #141-D: unnamed prototyped parameters not allowed when body is present
-src\usr_proc.c(74): error:  #130: expected a "{"
-Target not created
-Build target 'AwesomeOS SIM'
-compiling usr_proc.c...
-src\usr_proc.c(74): error:  #40: expected an identifier
-src\usr_proc.c(74): error:  #65: expected a ";"
-src\usr_proc.c(76): warning: At end of source:  #12-D: parsing restarts here after previous syntax error
-Target not created
-Build target 'AwesomeOS SIM'
-compiling usr_proc.c...
-src\usr_proc.c(74): error:  #40: expected an identifier
-src\usr_proc.c(74): error:  #65: expected a ";"
-src\usr_proc.c(76): warning: At end of source:  #12-D: parsing restarts here after previous syntax error
-Target not created
-Build target 'AwesomeOS SIM'
-compiling usr_proc.c...
-src\usr_proc.c(76): warning:  #940-D: missing return statement at end of non-void function "autostart_procs"
-linking...
-Program Size: Code=1968 RO-data=236 RW-data=8 ZI-data=2208  
-".\FLASH\ContextSwitch2.axf" - 0 Error(s), 1 Warning(s).
-Build target 'AwesomeOS SIM'
-compiling process.c...
-src\process.h(68): warning:  #1295-D: Deprecated declaration autostart_procs - give arg types
-src\process.c(40): warning:  #513-D: a value of type "void *" cannot be assigned to an entity of type "proc_routine_t"
-compiling usr_proc.c...
-linking...
-Program Size: Code=1952 RO-data=236 RW-data=8 ZI-data=2208  
-".\FLASH\ContextSwitch2.axf" - 0 Error(s), 2 Warning(s).
-Build target 'AwesomeOS SIM'
-compiling process.c...
-src\process.h(68): warning:  #1295-D: Deprecated declaration autostart_procs - give arg types
-linking...
-Program Size: Code=1952 RO-data=236 RW-data=8 ZI-data=2208  
-".\FLASH\ContextSwitch2.axf" - 0 Error(s), 1 Warning(s).
-Build target 'AwesomeOS SIM'
-compiling process.c...
-src\process.h(68): warning:  #1295-D: Deprecated declaration autostart_procs - give arg types
-linking...
-Program Size: Code=1948 RO-data=236 RW-data=8 ZI-data=2208  
-".\FLASH\ContextSwitch2.axf" - 0 Error(s), 1 Warning(s).
-Build target 'AwesomeOS SIM'
-linking...
-Program Size: Code=1948 RO-data=236 RW-data=8 ZI-data=2208  
-".\FLASH\ContextSwitch2.axf" - 0 Error(s), 0 Warning(s).
-Build target 'AwesomeOS SIM'
-linking...
-Program Size: Code=1948 RO-data=236 RW-data=8 ZI-data=2208  
-".\FLASH\ContextSwitch2.axf" - 0 Error(s), 0 Warning(s).
-Build target 'AwesomeOS SIM'
-compiling process.c...
-src\process.h(68): warning:  #1295-D: Deprecated declaration autostart_procs - give arg types
-linking...
-Program Size: Code=1972 RO-data=236 RW-data=8 ZI-data=2208  
-".\FLASH\ContextSwitch2.axf" - 0 Error(s), 1 Warning(s).
-Build target 'AwesomeOS SIM'
-compiling process.c...
-compiling usr_proc.c...
-linking...
-Program Size: Code=1968 RO-data=236 RW-data=8 ZI-data=2208  
-".\FLASH\ContextSwitch2.axf" - 0 Error(s), 0 Warning(s).
-Build target 'AwesomeOS SIM'
-linking...
-Program Size: Code=1968 RO-data=236 RW-data=8 ZI-data=2208  
-".\FLASH\ContextSwitch2.axf" - 0 Error(s), 0 Warning(s).
-Build target 'AwesomeOS SIM'
-compiling process.c...
-src\process.c(42): error:  #20: identifier "proc3" is undefined
-src\process.c(43): error:  #20: identifier "proc4" is undefined
-src\process.c(44): error:  #20: identifier "proc5" is undefined
-src\process.c(45): error:  #20: identifier "proc6" is undefined
-Target not created
 Build target 'AwesomeOS SIM'
 compiling process.c...
 linking...
 Program Size: Code=2000 RO-data=236 RW-data=8 ZI-data=4336  
 ".\FLASH\ContextSwitch2.axf" - 0 Error(s), 0 Warning(s).
 Build target 'AwesomeOS SIM'
-compiling usr_proc.c...
+compiling process.c...
+linking...
+Program Size: Code=2008 RO-data=236 RW-data=8 ZI-data=4336  
+".\FLASH\ContextSwitch2.axf" - 0 Error(s), 0 Warning(s).
+Build target 'AwesomeOS SIM'
+compiling process.c...
 linking...
 Program Size: Code=2008 RO-data=236 RW-data=8 ZI-data=4336  
 ".\FLASH\ContextSwitch2.axf" - 0 Error(s), 0 Warning(s).

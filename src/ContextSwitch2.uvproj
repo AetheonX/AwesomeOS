@@ -7,7 +7,7 @@
 
   <Targets>
     <Target>
-      <TargetName>ContextSwitch2 SIM</TargetName>
+      <TargetName>AwesomeOS SIM</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <TargetOption>
@@ -441,7 +441,7 @@
       </Groups>
     </Target>
     <Target>
-      <TargetName>ContextSwitch2 RAM</TargetName>
+      <TargetName>AwesomeOS RAM</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <TargetOption>
