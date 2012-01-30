@@ -25,9 +25,7 @@
 
 /**
  * @biref: initialize all processes in the system
- * NOTE: We assume there are only two user processes in the system in this example.
- *       We should have used an array or linked list pcbs so the repetive coding
- *       can be eliminated.
+ * NOTE: 
  *       We should have also used an initialization table which contains the entry
  *       points of each process so that this code does not have to hard code
  *       proc1 and proc2 symbols. We leave all these imperfections as excercies to the reader 
@@ -38,10 +36,13 @@ void process_init()
 	uint32_t * sp;
 	int pid = 0;
 
-	// HACK
 	pcb[0].m_proc = &proc0;
 	pcb[1].m_proc = &proc1;
 	pcb[2].m_proc = &proc2;
+	pcb[3].m_proc = &proc3;
+	pcb[4].m_proc = &proc4;
+	pcb[5].m_proc = &proc5;
+	pcb[6].m_proc = &proc6;
 
 	for (pid = 0; pid < PNUM; pid++) {
 		// initialize the process exception stack frame
@@ -102,14 +103,14 @@ int k_release_processor(void)
 	pcb_t * p_pcb_old = NULL;
 	
 	pid = scheduler();
+	if (pid == -1)
+		return -1;
+
 	if (gp_current_process == NULL) {
 		return -1;  
 	}
 	
 	p_pcb_old = gp_current_process;
-
-	if (pid == -1)
-		return -1;
 
 	gp_current_process = &pcb[pid];	
 	

@@ -16,7 +16,7 @@
 #define USR_SZ_STACK 0x080   // user proc stack size 512 = 0x80 *4 bytes
 #endif // DEBUG_0
 
-#define PNUM 3
+#define PNUM 7
 
 #define NULL 0
 #define INITIAL_xPSR 0x01000000  // user process initial xPSR value
@@ -62,9 +62,13 @@ int k_release_process(void);							// kernel release_process API
 int k_set_process_priority(int process_ID, int priority); // set process priority API
 int k_get_process_priority(int process_ID);	 			// get process priority API
 
-extern void proc0(void);			// user process 1
+extern void proc0(void);			// user process 0
 extern void proc1(void);			// user process 1
 extern void proc2(void);			// user process 2
+extern void proc3(void);			// user process 3
+extern void proc4(void);			// user process 4
+extern void proc5(void);			// user process 5
+extern void proc6(void);			// user process 6
 extern void __rte(void);			// pop exception stack frame
 
 #endif // ! _PROCESS_H_

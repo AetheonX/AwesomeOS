@@ -53,20 +53,24 @@ void proc2(void)
 
 void proc3(void) {
 	// TEST CASE HERE!
-	release_processor();
+	while (1)
+		release_processor();
 }
 
 void proc4(void) {
 	// TEST CASE HERE!
-	release_processor();
+	while (1)
+		release_processor();
 }
 
 void proc5(void) {
 	// TEST CASE HERE!
-	release_processor();
+	while (1)
+		release_processor();
 }
 
 void proc6(void) {
 	// TEST CASE HERE!
-	release_processor();
+	while (1)
+		release_processor();
 }
