@@ -10,9 +10,6 @@
 
 // NULL proccess - RESERVED - DO NOT CHANGE
 void proc0(void) {
-	printf("\n\rPriority of process 0: %d", get_process_priority(0));
-	set_process_priority(0, 1);
-	printf("\n\rPriority of process 0: %d", get_process_priority(0));
 	while (1)
 	 	release_processor();
 }

@@ -7,3 +7,13 @@ D:\Dev\OS\src\ContextSwitch2.uvproj
 Project File Date:  01/18/2012
 
 <h2>Output:</h2>
+Build target 'ContextSwitch2 SIM'
+compiling main_svc.c...
+compiling usr_proc.c...
+linking...
+Program Size: Code=1968 RO-data=236 RW-data=8 ZI-data=2208  
+".\FLASH\ContextSwitch2.axf" - 0 Error(s), 0 Warning(s).
+Build target 'ContextSwitch2 SIM'
+linking...
+Program Size: Code=1968 RO-data=236 RW-data=8 ZI-data=2208  
+".\FLASH\ContextSwitch2.axf" - 0 Error(s), 0 Warning(s).
