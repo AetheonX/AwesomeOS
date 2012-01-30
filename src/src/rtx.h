@@ -5,6 +5,8 @@
 #ifndef _RTX_H
 #define _RTX_H
 
+#define GROUP "G021"
+
 typedef unsigned int U32;
 
 #define __SVC_0  __svc_indirect(0)

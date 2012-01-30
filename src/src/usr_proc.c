@@ -20,11 +20,11 @@ void proc1(void)
 	volatile int ret_val = 10;
     while (1) {
         if (i!=0 &&i%5 == 0 ) {
+			uart0_put_string("\n\r");
             ret_val = release_processor();
 #ifdef DEBUG_0
 		    printf("\n\rproc1: ret_val=%d. ", ret_val);
 #else
-		  	uart0_put_string("\n\r");
 #endif // DEBUG_0
         }
         uart0_put_char('A' + i%26);
@@ -39,11 +39,11 @@ void proc2(void)
 	volatile int ret_val = 20;
     while (1) {
         if (i!=0 &&i%5 == 0 ) {
+			uart0_put_string("\n\r");
             ret_val = release_processor();
 #ifdef DEBUG_0
 	    	printf("\n\rproc2: ret_val=%d. ", ret_val);
 #else
-			uart0_put_string("\n\r");
 #endif // DEBUG_0
         }
         uart0_put_char('a' + i%26);
@@ -52,15 +52,44 @@ void proc2(void)
 }
 
 void proc3(void) {
-	// TEST CASE HERE!
-	while (1)
+	// TESTING PRIORITY LEVEL GETTER
+	while (1) {
+		int result;
+		result = 1;
+
+		if (get_process_priority(3) != 3)
+			result = 0;
+
+		uart0_put_string("G021_test: test 3 ");
+		if (result == 0)
+			uart0_put_string("FAIL");
+		else
+			uart0_put_string("OK");
+		uart0_put_string("\n\r");
+
 		release_processor();
+	}
 }
 
 void proc4(void) {
-	// TEST CASE HERE!
-	while (1)
+	// TESTING PRIORITY LEVEL SETTER
+	while (1) {
+		int result;
+		result = 1;
+
+		set_process_priority(4,2);
+		if (get_process_priority(4) != 2)
+			result = 0;
+
+		uart0_put_string("G021_test: test 4 ");
+		if (result == 0)
+			uart0_put_string("FAIL");
+		else
+			uart0_put_string("OK");
+		uart0_put_string("\n\r");
+
 		release_processor();
+	}
 }
 
 void proc5(void) {
