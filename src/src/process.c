@@ -84,15 +84,11 @@ int scheduler(void)
 	}
 	
 	pid = gp_current_process->m_pid;
-	
-	if (pid == 0 )
-	    return 1;
-	else if (pid == 1 )
-	    return 2;
-	else if (pid == 2 )
-	    return 1;
-	else
+
+	if (pid < 0)
 		return -1; // error code -1
+	
+	return pid % (PNUM - 1) + 1;
 }
 /**
  * @brief release_processor(). 
