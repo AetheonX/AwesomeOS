@@ -436,6 +436,11 @@
               <FileType>1</FileType>
               <FilePath>.\src\usr_proc.c</FilePath>
             </File>
+            <File>
+              <FileName>memory.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\memory.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
@@ -869,6 +874,11 @@
               <FileName>usr_proc.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\src\usr_proc.c</FilePath>
+            </File>
+            <File>
+              <FileName>memory.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\memory.c</FilePath>
             </File>
           </Files>
         </Group>

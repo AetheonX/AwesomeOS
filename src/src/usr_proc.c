@@ -19,27 +19,33 @@ void proc0(void) {
 	}
 }
 
-
-// MEMORY MANAGEMENT TESTING:
-// I don't know what happens when there is not enough memory to allocate for request_memory_block (someone on the discussion forum asked that question I think)
-// 1. Process Management does not handle blocking right now (needs proper queue structure, as in dynamic linked list), that's about the only thing that's missing from there
-// 2. Dynamic memory allocation of pstack (which is apparently required - as in malloc(blah blah))
-// those are the only things which are missing from the Process Management perspective
-
 void proc1(void) {
     while (1) {
-		results[1] = 1;
+		uart0_put_string("P1:\n\r");
+
+		receive_message(0);
+
+		uart0_put_string("~~~~~~~~~~~~~~~~~~P1:\n\r");
+
 		release_processor();
     }
 }
 
 void proc2(void) {
     while (1) {
+		uart0_put_string("P2:\n\r");
+		send_message(1, "Communication established!");
+		send_message(1, "This is a test");
+		send_message(1, "22222222");
+		send_message(1, "333333333");
         lastMemBlock = request_memory_block();
 		printf("mem block: %X\n", lastMemBlock);
 		results[2] = (lastMemBlock == 0) ? 0 : 1;
+
+		uart0_put_string("~~~~~~~~~~~~~~~~~~P2:\n\r");
+
 		release_processor();
-		//release_memory_block(lastMemBlock);
+		release_memory_block(lastMemBlock);
     }
 }
 

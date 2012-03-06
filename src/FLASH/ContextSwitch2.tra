@@ -10,15 +10,16 @@
 ### List of Objects: adding '".\flash\uart_polling.o"'
 ### List of Objects: adding '".\flash\usr_proc.o"'
 ### List of Objects: adding '".\flash\memory.o"'
+### List of Objects: adding '".\flash\message.o"'
 ### ADS-LD Command completed:
---cpu Cortex-M3 ".\flash\startup_lpc17xx.o" ".\flash\system_lpc17xx.o" ".\flash\hal.o" ".\flash\main_svc.o" ".\flash\process.o" ".\flash\retarget.o" ".\flash\uart_polling.o" ".\flash\usr_proc.o" ".\flash\memory.o" --strict --scatter ".\FLASH\ContextSwitch2.sct" 
+--cpu Cortex-M3 ".\flash\startup_lpc17xx.o" ".\flash\system_lpc17xx.o" ".\flash\hal.o" ".\flash\main_svc.o" ".\flash\process.o" ".\flash\retarget.o" ".\flash\uart_polling.o" ".\flash\usr_proc.o" ".\flash\memory.o" ".\flash\message.o" --strict --scatter ".\FLASH\ContextSwitch2.sct" 
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
 --info sizes --info totals --info unused --info veneers 
  --list ".\FLASH\lst\ContextSwitch2.map" -o ".\FLASH\ContextSwitch2.axf"### Preparing Environment (PrepEnvAds)
 ### ADS-LD Output File: '.\FLASH\ContextSwitch2.axf'
 ### ADS-LD Command File: '.\FLASH\ContextSwitch2.lnp'
 ### Checking for dirty Components...
-### Creating CmdFile '.\FLASH\ContextSwitch2.lnp', Handle=0x0000072C
+### Creating CmdFile '.\FLASH\ContextSwitch2.lnp', Handle=0x00002308
 ### Writing '.lnp' file
 ### ADS-LD Command file '.\FLASH\ContextSwitch2.lnp' is ready.
 ### ADS-LD: About to start ADS-LD Thread.

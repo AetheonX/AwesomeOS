@@ -1,10 +1,3 @@
-/**
- * @brief: process.h  process management source file
- * @author Irene Huang
- * @author Thomas Reidemeister
- * @author Valeriy Chibisov
- */
-
 #include <LPC17xx.h>
 #include <system_LPC17xx.h>
 #include "uart_polling.h"
@@ -80,13 +73,6 @@ void move_to_ready(uint32_t pid)
 	}
 	
 	remove_from_blocked(pid);
-	
-	/*
-	pcb_readyq.pcb_q[pcb_readyq.nid] = pid;
-	pcb_readyq.nid++;
-
-	if (pcb_readyq.nid >= PNUM)
-		pcb_readyq.nid = 0;*/
 }
 
 void print_ready()
@@ -240,6 +226,52 @@ bool is_process_blocked(uint32_t pid)
 	return false;
 }
 
+pcb_t * current_process() {
+	return gp_current_process;
+}
+
+pcb_t * get_process(uint32_t pid) {
+	return &pcb[pid];
+}
+
+void enqueue_envelope(uint32_t pid, MessageEnvelope *envel) {
+	envelope *new = (envelope *)k_request_memory_block();
+	envelope *nenv = pcb[pid].m_envelope;
+
+	new->next = 0;
+	new->info = envel;
+
+	if (nenv == 0) {
+		 pcb[pid].m_envelope = new;
+
+		 return;
+	}
+
+	while (nenv->next != 0)
+		nenv = nenv->next;			
+	nenv->next = new;
+}
+
+void dequeue_envelope(uint32_t pid, envelope *envel) {
+	envelope *nenv = (get_process(pid))->m_envelope;
+	envelope *prev = 0;
+
+	while (nenv != 0) {
+		if (nenv == envel) {
+			if (prev == 0)
+				(get_process(pid))->m_envelope = nenv->next;
+			else
+				prev->next = nenv->next;
+			k_release_memory_block(nenv->info);
+			k_release_memory_block(nenv);
+
+			return;
+		}
+		prev = nenv;
+		nenv = nenv->next;
+	}
+}
+
 void process_init() 
 {
     volatile int i;
@@ -265,6 +297,7 @@ void process_init()
 		pcb_c.m_ppriority 	= (pid == 0) ? 4 : 3;
 		pcb_c.nextBlocked	= NULL;
 		pcb_c.nextReady		= NULL;
+		pcb_c.m_envelope	= NULL;
 		
 		sp = (uint32_t*)request_proc_stack();
 	    
@@ -289,18 +322,6 @@ void process_init()
 
 int scheduler(void)
 {
-	/*volatile int pid;
-
-	if (gp_current_process == NULL) {
-	   gp_current_process = &pcb[next_ready()];
-	   return 0;
-	}
-	
-	pid = gp_current_process->m_pid;
-	if (pid < 0)
-		return -1; // error code -1
-	
-	// Round-robin approach*/
 	return next_ready();
 }
 

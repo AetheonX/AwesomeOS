@@ -1,12 +1,3 @@
-/**
- * @brief: process.h  process management hearder file
- * @author Irene Huang
- * @author Thomas Reidemeister
- * @author Valeriy Chibisov
- * @date 2011/01/18
- * NOTE: Assuming there are only two user processes in the system
- */
-
 #ifndef _PROCESS_H_
 #define _PROCESS_H_
 
@@ -25,18 +16,20 @@
 #endif // DEBUG_0
 
 #include <stdint.h>
+#include "message.h"
 
 typedef void (*proc_routine_t)(void);
 
 typedef enum {NEW = 0, RDY, RUN, MEM_BLOCKED, MSG_BLOCKED} proc_state_t; 
 typedef struct pcb pcb_t;
 
+typedef struct envelope envelope;
+typedef struct envelope {
+	envelope *next;
+	MessageEnvelope *info;
+} envelope;
+
 typedef struct pcb {
-  
-  //Note you may want to add your own member variables
-  //in order to finish P1 and the entire project 
-  //struct pcb *mp_next;  // next pcb, not used in this example, RTX project most likely will need it, keep here for reference
-  
   uint32_t *mp_sp;      		// stack pointer of the process
   uint32_t m_pid;				// process id
   proc_state_t m_state; 		// state of the process 
@@ -44,7 +37,9 @@ typedef struct pcb {
 
   proc_routine_t m_proc;
   pcb_t *nextBlocked;
-  pcb_t *nextReady; 
+  pcb_t *nextReady;
+  
+  envelope *m_envelope;  
 } pcb_t;
 
 typedef struct pcb_queue {
@@ -57,9 +52,6 @@ typedef struct ProcessQueue {
 	pcb_t* first;
 } ProcessQueue;
 
-// TODO: turn this into a dynamically allocated memory
-uint32_t pstack[PNUM][USR_SZ_STACK];      // stack for proc1
-
 pcb_t pcb[PNUM];
 pcb_queue pcb_readyq;
 pcb_queue pcb_blockedq;
@@ -67,12 +59,18 @@ pcb_queue pcb_blockedq;
 ProcessQueue pcb_blockedQueue;
 ProcessQueue pcb_readyQueue;
 
-pcb_t  *gp_current_process = NULL;  // always point to the current process
+pcb_t *gp_current_process = NULL;  // always point to the current process
 
 void remove_from_blocked(uint32_t pid);
 void remove_from_ready(uint32_t pid);
 void move_to_ready(uint32_t pid);
 void move_to_blocked(uint32_t pid, proc_state_t new_state);
+
+pcb_t * current_process();
+pcb_t * get_process(uint32_t pid);
+void enqueue_envelope(uint32_t pid, MessageEnvelope *envel);
+void dequeue_envelope(uint32_t pid, envelope *envel);
+
 void remove_memory_blocks();
 void block_current_process(proc_state_t state);
 void print_ready();

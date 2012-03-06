@@ -441,6 +441,11 @@
               <FileType>1</FileType>
               <FilePath>.\src\memory.c</FilePath>
             </File>
+            <File>
+              <FileName>message.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\message.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
@@ -879,6 +884,11 @@
               <FileName>memory.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\src\memory.c</FilePath>
+            </File>
+            <File>
+              <FileName>message.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\message.c</FilePath>
             </File>
           </Files>
         </Group>
