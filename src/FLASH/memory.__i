@@ -1,0 +1,1 @@
+-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I C:\Development\Keil\ARM\RV31\Inc -I C:\Development\Keil\ARM\CMSIS\Include -I C:\Development\Keil\ARM\Inc\NXP\LPC17xx -o ".\FLASH\memory.o" --omf_browse ".\FLASH\memory.crf" --depend ".\FLASH\memory.d" "src\memory.c"

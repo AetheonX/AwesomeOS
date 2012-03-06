@@ -1,0 +1,6 @@
+=== AWESOMEOS ===
+Group ID: G021
+
+The files in src/src/ are the c files that handle all of the process and memory management. They are described in obvious names (e.g. process.c)
+
+To compile, use Keil IDE.

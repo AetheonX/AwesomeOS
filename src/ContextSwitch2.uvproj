@@ -7,7 +7,7 @@
 
   <Targets>
     <Target>
-      <TargetName>ContextSwitch2 SIM</TargetName>
+      <TargetName>AwesomeOS SIM</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <TargetOption>
@@ -436,12 +436,17 @@
               <FileType>1</FileType>
               <FilePath>.\src\usr_proc.c</FilePath>
             </File>
+            <File>
+              <FileName>memory.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\memory.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
     </Target>
     <Target>
-      <TargetName>ContextSwitch2 RAM</TargetName>
+      <TargetName>AwesomeOS RAM</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <TargetOption>
@@ -869,6 +874,11 @@
               <FileName>usr_proc.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\src\usr_proc.c</FilePath>
+            </File>
+            <File>
+              <FileName>memory.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\memory.c</FilePath>
             </File>
           </Files>
         </Group>

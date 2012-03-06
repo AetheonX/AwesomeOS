@@ -15,10 +15,10 @@
 #define NULL 0
 #endif // DEBUG_0
 #include "uart_polling.h"
-
 #include "rtx.h"
 
 extern void process_init(void);
+extern void memory_init(void);
 
 int main() 
 {
@@ -31,6 +31,8 @@ int main()
 	uart0_init();   
 	process_init();
 	__enable_irq();
+	memory_init();
+
 	
 	// transit to unprivileged level, default MSP is used
 	__set_CONTROL(__get_CONTROL() | BIT(0));  

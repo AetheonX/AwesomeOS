@@ -9,15 +9,16 @@
 ### List of Objects: adding '".\ram\retarget.o"'
 ### List of Objects: adding '".\ram\uart_polling.o"'
 ### List of Objects: adding '".\ram\usr_proc.o"'
+### List of Objects: adding '".\ram\memory.o"'
 ### ADS-LD Command completed:
---cpu Cortex-M3 ".\ram\startup_lpc17xx.o" ".\ram\system_lpc17xx.o" ".\ram\hal.o" ".\ram\main_svc.o" ".\ram\process.o" ".\ram\retarget.o" ".\ram\uart_polling.o" ".\ram\usr_proc.o" --strict --scatter ".\RAM\ContextSwitch2.sct" 
+--cpu Cortex-M3 ".\ram\startup_lpc17xx.o" ".\ram\system_lpc17xx.o" ".\ram\hal.o" ".\ram\main_svc.o" ".\ram\process.o" ".\ram\retarget.o" ".\ram\uart_polling.o" ".\ram\usr_proc.o" ".\ram\memory.o" --strict --scatter ".\RAM\ContextSwitch2.sct" 
 --autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
 --info sizes --info totals --info unused --info veneers 
  --list ".\RAM\lst\ContextSwitch2.map" -o ".\RAM\ContextSwitch2.axf"### Preparing Environment (PrepEnvAds)
 ### ADS-LD Output File: '.\RAM\ContextSwitch2.axf'
 ### ADS-LD Command File: '.\RAM\ContextSwitch2.lnp'
 ### Checking for dirty Components...
-### Creating CmdFile '.\RAM\ContextSwitch2.lnp', Handle=0x00000310
+### Creating CmdFile '.\RAM\ContextSwitch2.lnp', Handle=0x00000384
 ### Writing '.lnp' file
 ### ADS-LD Command file '.\RAM\ContextSwitch2.lnp' is ready.
 ### ADS-LD: About to start ADS-LD Thread.

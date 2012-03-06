@@ -1,0 +1,90 @@
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   memory.c
+#
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   ../ContextSwitch2.uvopt
+#	modified:   ../ContextSwitch2.uvproj
+#	modified:   ../ContextSwitch2_AwesomeOS SIM.dep
+#	modified:   ../ContextSwitch2_uvopt.bak
+#	modified:   ../ContextSwitch2_uvproj.bak
+#	modified:   ../FLASH/ContextSwitch2.axf
+#	modified:   ../FLASH/ContextSwitch2.htm
+#	modified:   ../FLASH/ContextSwitch2.lnp
+#	modified:   ../FLASH/ContextSwitch2.plg
+#	modified:   ../FLASH/ContextSwitch2.tra
+#	modified:   ../FLASH/lst/ContextSwitch2.map
+#	modified:   ../FLASH/lst/startup_LPC17xx.lst
+#	modified:   ../FLASH/main_svc.__i
+#	modified:   ../FLASH/main_svc.crf
+#	modified:   ../FLASH/main_svc.d
+#	modified:   ../FLASH/main_svc.o
+#	modified:   ../FLASH/process.__i
+#	modified:   ../FLASH/process.crf
+#	modified:   ../FLASH/process.d
+#	modified:   ../FLASH/process.o
+#	modified:   ../FLASH/retarget.crf
+#	modified:   ../FLASH/retarget.d
+#	modified:   ../FLASH/retarget.o
+#	modified:   ../FLASH/startup_LPC17xx.o
+#	modified:   ../FLASH/system_lpc17xx.crf
+#	modified:   ../FLASH/system_lpc17xx.d
+#	modified:   ../FLASH/system_lpc17xx.o
+#	modified:   ../FLASH/uart_polling.crf
+#	modified:   ../FLASH/uart_polling.d
+#	modified:   ../FLASH/uart_polling.o
+#	modified:   ../FLASH/usr_proc.__i
+#	modified:   ../FLASH/usr_proc.crf
+#	modified:   ../FLASH/usr_proc.d
+#	modified:   ../FLASH/usr_proc.o
+#	modified:   ../RAM/ContextSwitch2.tra
+#	modified:   main_svc.c
+#	modified:   memory.c
+#	modified:   usr_proc.c
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	../ContextSwitch2.uvgui.mraissi
+#	../ContextSwitch2.uvgui_mraissi.bak
+#	../ContextSwitch2_AwesomeOS RAM.dep
+#	../FLASH/memory.__i
+#	../FLASH/memory.crf
+#	../FLASH/memory.d
+#	../FLASH/memory.o
+#	../FLASH/retarget.__i
+#	../FLASH/uart_polling.__i
+#	../RAM/ContextSwitch2.axf
+#	../RAM/ContextSwitch2.htm
+#	../RAM/ContextSwitch2.lnp
+#	../RAM/ContextSwitch2.plg
+#	../RAM/hal.crf
+#	../RAM/hal.d
+#	../RAM/hal.o
+#	../RAM/lst/
+#	../RAM/main_svc.crf
+#	../RAM/main_svc.d
+#	../RAM/main_svc.o
+#	../RAM/process.crf
+#	../RAM/process.d
+#	../RAM/process.o
+#	../RAM/retarget.crf
+#	../RAM/retarget.d
+#	../RAM/retarget.o
+#	../RAM/startup_LPC17xx.d
+#	../RAM/startup_LPC17xx.o
+#	../RAM/system_lpc17xx.crf
+#	../RAM/system_lpc17xx.d
+#	../RAM/system_lpc17xx.o
+#	../RAM/uart_polling.crf
+#	../RAM/uart_polling.d
+#	../RAM/uart_polling.o
+#	../RAM/usr_proc.crf
+#	../RAM/usr_proc.d
+#	../RAM/usr_proc.o
+#	output.txt

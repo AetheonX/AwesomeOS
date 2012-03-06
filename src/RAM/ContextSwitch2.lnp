@@ -1,0 +1,4 @@
+--cpu Cortex-M3 ".\ram\startup_lpc17xx.o" ".\ram\system_lpc17xx.o" ".\ram\hal.o" ".\ram\main_svc.o" ".\ram\process.o" ".\ram\retarget.o" ".\ram\uart_polling.o" ".\ram\usr_proc.o" ".\ram\memory.o" --strict --scatter ".\RAM\ContextSwitch2.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\RAM\lst\ContextSwitch2.map" -o ".\RAM\ContextSwitch2.axf"

@@ -6,70 +6,130 @@
 
 #ifdef DEBUG_0
 #include <stdio.h>
-#endif // DEBUG_0		
+#endif // DEBUG_0
+
+// HACK
+int results[7];
+void* lastMemBlock;
 
 // NULL proccess - RESERVED - DO NOT CHANGE
 void proc0(void) {
-	printf("\n\rPriority of process 0: %d", get_process_priority(0));
-	set_process_priority(0, 1);
-	printf("\n\rPriority of process 0: %d", get_process_priority(0));
-	while (1)
+	while (1) {
 	 	release_processor();
+	}
 }
 
-void proc1(void)
-{
-    volatile int i =0;
-	volatile int ret_val = 10;
+
+// MEMORY MANAGEMENT TESTING:
+// I don't know what happens when there is not enough memory to allocate for request_memory_block (someone on the discussion forum asked that question I think)
+// 1. Process Management does not handle blocking right now (needs proper queue structure, as in dynamic linked list), that's about the only thing that's missing from there
+// 2. Dynamic memory allocation of pstack (which is apparently required - as in malloc(blah blah))
+// those are the only things which are missing from the Process Management perspective
+
+void proc1(void) {
     while (1) {
-        if (i!=0 &&i%5 == 0 ) {
-            ret_val = release_processor();
-#ifdef DEBUG_0
-		    printf("\n\rproc1: ret_val=%d. ", ret_val);
-#else
-		  	uart0_put_string("\n\r");
-#endif // DEBUG_0
-        }
-        uart0_put_char('A' + i%26);
-        i++;
+		results[1] = 1;
+		release_processor();
     }
-
 }
 
-void proc2(void)
-{
-    volatile int i =0;
-	volatile int ret_val = 20;
+void proc2(void) {
     while (1) {
-        if (i!=0 &&i%5 == 0 ) {
-            ret_val = release_processor();
-#ifdef DEBUG_0
-	    	printf("\n\rproc2: ret_val=%d. ", ret_val);
-#else
-			uart0_put_string("\n\r");
-#endif // DEBUG_0
-        }
-        uart0_put_char('a' + i%26);
-        i++;
+        lastMemBlock = request_memory_block();
+		printf("mem block: %X\n", lastMemBlock);
+		results[2] = (lastMemBlock == 0) ? 0 : 1;
+		release_processor();
+		//release_memory_block(lastMemBlock);
     }
 }
 
 void proc3(void) {
-	// TEST CASE HERE!
-	release_processor();
+	// TESTING PRIORITY LEVEL GETTER
+	int i = 1;
+	while (i) {
+		int result;
+		result = 1;
+
+		if (get_process_priority(3) != 3)
+			result = 0;
+
+		results[3] = result;
+		
+		if (i == 6)
+			release_memory_block(lastMemBlock);
+		
+		i++;
+		
+		release_processor();
+	}
 }
 
 void proc4(void) {
-	// TEST CASE HERE!
-	release_processor();
+	// TESTING PRIORITY LEVEL SETTER - CORRECT USAGE
+	while (1) {
+		int result;
+		result = 1;
+
+		set_process_priority(4,2);
+		if (get_process_priority(4) != 2)
+			result = 0;
+		set_process_priority(4,3);
+
+		results[4] = result;
+
+		release_processor();
+	}
 }
 
 void proc5(void) {
-	// TEST CASE HERE!
-	release_processor();
+	// TESTING PRIORITY LEVEL SETTER - SETTING PRIORITY OF ANOTHER PROCESS - FAILS
+	while (1) {
+		int result;
+		result = 1;
+
+		set_process_priority(4,2);
+		if (get_process_priority(4) == 2)
+			result = 0;
+
+		results[5] = result;
+
+		release_processor();
+	}
 }
 
 void proc6(void) {
-	// TEST CASE HERE!
-	release_processor();
+	// OUTPUT PROCESS - gathers data from all the other processes and outputs to UART0
+	while (1) {
+		int counter = 0;
+		int total	= 5;
+		int i = 0;
+		int asciioffset = 48;
+		
+		uart0_put_string("G021_test: START\n\r");
+		uart0_put_string("G021_test: total ");uart0_put_char(total+asciioffset);uart0_put_string(" tests\n\r");
+		for (i = 1; i < total+1; i++) {
+			uart0_put_string("G021_test: test ");
+			uart0_put_char(i+asciioffset);
+			
+			if (is_process_blocked(i))
+			{
+				uart0_put_string(" BLOCKED");
+			}
+			else
+			{
+				if (results[i] == 0)
+					uart0_put_string(" FAIL");
+				else {
+					uart0_put_string(" OK");
+					counter++;
+				}
+			}
+			uart0_put_string("\n\r");
+		}
+		uart0_put_string("G021_test: ");uart0_put_char(counter+asciioffset);uart0_put_string("/");uart0_put_char(total+asciioffset);uart0_put_string(" tests OK\n\r");
+		uart0_put_string("G021_test: ");uart0_put_char((total-counter)+asciioffset);uart0_put_string("/");uart0_put_char(total+asciioffset);uart0_put_string(" tests FAIL\n\r");
+		uart0_put_string("G021_test: END\n\r");
+		
+		release_processor();
+	}
 }
