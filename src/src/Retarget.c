@@ -15,7 +15,7 @@
 
 #include <stdio.h>
 #include <rt_misc.h>
-#include "uart_polling.h"
+#include "uart.h"
 
 #pragma import(__use_no_semihosting_swi)
 
@@ -26,9 +26,9 @@
 int sendchar (int c) {
 
   if (c == '\n')  {
-    uart0_put_char (0x0D);
+    //uart0_put_char (0x0D);
   }
-  uart0_put_char (c);
+  //uart0_put_char (c);
 
   return (c);
 }
@@ -39,7 +39,7 @@ int sendchar (int c) {
  *----------------------------------------------------------------------------*/
 int getkey (void) {
 
-  return (uart0_get_char());
+  //return (uart0_get_char());
 }
 
 

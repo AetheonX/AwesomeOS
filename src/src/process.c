@@ -1,6 +1,5 @@
 #include <LPC17xx.h>
 #include <system_LPC17xx.h>
-#include "uart_polling.h"
 #include "process.h"
 
 #ifdef DEBUG_0
@@ -281,13 +280,18 @@ void process_init()
 	pcb_readyQueue.first = NULL;
 
 	// Init all the system processes' entry points here
-	pcb[0].m_proc = &proc0;
-	pcb[1].m_proc = &proc1;
-	pcb[2].m_proc = &proc2;
-	pcb[3].m_proc = &proc3;
-	pcb[4].m_proc = &proc4;
-	pcb[5].m_proc = &proc5;
-	pcb[6].m_proc = &proc6;
+	pcb[0].m_proc 	= &proc_null;
+	pcb[1].m_proc 	= &proc1;
+	pcb[2].m_proc 	= &proc2;
+	pcb[3].m_proc 	= &proc3;
+	pcb[4].m_proc 	= &proc4;
+	pcb[5].m_proc 	= &proc5;
+	pcb[6].m_proc 	= &proc6;
+	pcb[7].m_proc 	= &proc_null; // PROCESS A
+	pcb[8].m_proc 	= &proc_null; // PROCESS B
+	pcb[9].m_proc 	= &proc_null; // PROCESS C
+	pcb[10].m_proc 	= &proc_crt_display;
+	pcb[11].m_proc	= &proc_console;
 	
 	for (pid = 0; pid < PNUM; pid++) {
 		// initialize the process exception stack frame

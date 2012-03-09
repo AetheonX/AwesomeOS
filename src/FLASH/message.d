@@ -5,5 +5,5 @@
 .\FLASH\message.o: C:\Development\Keil\ARM\CMSIS\Include\core_cmInstr.h
 .\FLASH\message.o: C:\Development\Keil\ARM\CMSIS\Include\core_cmFunc.h
 .\FLASH\message.o: C:\Development\Keil\ARM\Inc\NXP\LPC17xx\system_LPC17xx.h
-.\FLASH\message.o: src\uart_polling.h
+.\FLASH\message.o: src\uart.h
 .\FLASH\message.o: src\message.h

@@ -9,7 +9,7 @@
 #ifdef DEBUG_0
 #include <stdio.h>
 #endif // DEBUG_0
-#include "uart_polling.h"
+#include "uart.h"
 #include "message.h"
 //#include "process.h" // problems when including
 
@@ -61,27 +61,22 @@ int k_send_message (uint32_t pid, void *message) {
 		move_to_ready(pid);
 }
 
+// FEEL FREE TO MODIFY ACCORDING TO delayed_send, the following modifications were only made to suit console handling process/uart i-process
 // Process receives a message from sender
 void * k_receive_message (uint32_t *sender_ID) {
 	envelope *envel = (current_process())->m_envelope;
 
+	if (envel == 0)
+		return 0;
 	/*while (envel == 0) {
 		move_to_blocked((current_process())->m_pid, MSG_BLOCKED);
 		k_release_processor();
 		envel = (current_process())->m_envelope;
 	}*/
 
-	// Process all the queued messages
-	while (envel != 0) {
-		MessageEnvelope *menvel = envel->info;
-		uart0_put_string("M:");
-		uart0_put_string((unsigned char *)((menvel)->message));
-		uart0_put_string("\n\r");
+	dequeue_envelope((current_process())->m_pid, envel);
 
-		dequeue_envelope((current_process())->m_pid, envel);
-
-	 	envel = envel->next;
-	}
+	return envel->info->message;
 }
 
 // HAS TO HAVE AN EMPTY LINE HERE

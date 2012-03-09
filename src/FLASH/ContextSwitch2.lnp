@@ -1,4 +1,4 @@
---cpu Cortex-M3 ".\flash\startup_lpc17xx.o" ".\flash\system_lpc17xx.o" ".\flash\hal.o" ".\flash\main_svc.o" ".\flash\process.o" ".\flash\retarget.o" ".\flash\uart_polling.o" ".\flash\usr_proc.o" ".\flash\memory.o" ".\flash\message.o" --strict --scatter ".\FLASH\ContextSwitch2.sct" 
+--cpu Cortex-M3 ".\flash\startup_lpc17xx.o" ".\flash\system_lpc17xx.o" ".\flash\hal.o" ".\flash\main_svc.o" ".\flash\process.o" ".\flash\retarget.o" ".\flash\memory.o" ".\flash\message.o" ".\flash\uart_irq.o" ".\flash\sys_proc.o" ".\flash\test_proc.o" ".\flash\utilities.o" --strict --scatter ".\FLASH\ContextSwitch2.sct" 
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
 --info sizes --info totals --info unused --info veneers 
  --list ".\FLASH\lst\ContextSwitch2.map" -o ".\FLASH\ContextSwitch2.axf"

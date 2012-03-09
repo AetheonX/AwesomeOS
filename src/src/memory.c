@@ -10,7 +10,7 @@
 #define USR_SZ_STACK 0x400   // user proc stack size 512 = 0x80 *4 bytes
 #endif // DEBUG_0
 
-#define NumberOfMemoryBlocks (30)
+#define NumberOfMemoryBlocks (128)
 #define SizeOfMemoryBlock (128)	// in Bytes
 
 extern unsigned int Image$$RW_IRAM1$$ZI$$Limit;

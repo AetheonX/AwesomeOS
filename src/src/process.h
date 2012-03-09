@@ -1,7 +1,7 @@
 #ifndef _PROCESS_H_
 #define _PROCESS_H_
 
-#define PNUM 7
+#define PNUM 12
 
 #define NULL 0
 #define bool int
@@ -82,13 +82,15 @@ int k_release_process(void);							// kernel release_process API
 int k_set_process_priority(int process_ID, int priority); // set process priority API
 int k_get_process_priority(int process_ID);	 			// get process priority API
 
-extern void proc0(void);			// user process 0
-extern void proc1(void);			// user process 1
-extern void proc2(void);			// user process 2
-extern void proc3(void);			// user process 3
-extern void proc4(void);			// user process 4
-extern void proc5(void);			// user process 5
-extern void proc6(void);			// user process 6
+extern void proc_null(void);		// null process 0
+extern void proc1(void);			// test process 1
+extern void proc2(void);			// test process 2
+extern void proc3(void);			// test process 3
+extern void proc4(void);			// test process 4
+extern void proc5(void);			// test process 5
+extern void proc6(void);			// test process 6
+extern void proc_crt_display(void);	// crt display
+extern void proc_console(void);	// console process
 extern void __rte(void);			// pop exception stack frame
 
 #endif // ! _PROCESS_H_

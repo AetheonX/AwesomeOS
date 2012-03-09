@@ -427,16 +427,6 @@
               <FilePath>.\src\Retarget.c</FilePath>
             </File>
             <File>
-              <FileName>uart_polling.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\src\uart_polling.c</FilePath>
-            </File>
-            <File>
-              <FileName>usr_proc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\src\usr_proc.c</FilePath>
-            </File>
-            <File>
               <FileName>memory.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\src\memory.c</FilePath>
@@ -445,6 +435,26 @@
               <FileName>message.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\src\message.c</FilePath>
+            </File>
+            <File>
+              <FileName>uart_irq.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\uart_irq.c</FilePath>
+            </File>
+            <File>
+              <FileName>sys_proc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\sys_proc.c</FilePath>
+            </File>
+            <File>
+              <FileName>test_proc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\test_proc.c</FilePath>
+            </File>
+            <File>
+              <FileName>utilities.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\utilities.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -871,16 +881,6 @@
               <FilePath>.\src\Retarget.c</FilePath>
             </File>
             <File>
-              <FileName>uart_polling.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\src\uart_polling.c</FilePath>
-            </File>
-            <File>
-              <FileName>usr_proc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\src\usr_proc.c</FilePath>
-            </File>
-            <File>
               <FileName>memory.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\src\memory.c</FilePath>
@@ -889,6 +889,26 @@
               <FileName>message.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\src\message.c</FilePath>
+            </File>
+            <File>
+              <FileName>uart_irq.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\uart_irq.c</FilePath>
+            </File>
+            <File>
+              <FileName>sys_proc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\sys_proc.c</FilePath>
+            </File>
+            <File>
+              <FileName>test_proc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\test_proc.c</FilePath>
+            </File>
+            <File>
+              <FileName>utilities.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\utilities.c</FilePath>
             </File>
           </Files>
         </Group>

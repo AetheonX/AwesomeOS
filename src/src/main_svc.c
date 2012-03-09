@@ -14,7 +14,7 @@
 #else
 #define NULL 0
 #endif // DEBUG_0
-#include "uart_polling.h"
+#include "uart.h"
 #include "rtx.h"
 
 extern void process_init(void);
@@ -33,7 +33,6 @@ int main()
 	__enable_irq();
 	memory_init();
 
-	
 	// transit to unprivileged level, default MSP is used
 	__set_CONTROL(__get_CONTROL() | BIT(0));  
 

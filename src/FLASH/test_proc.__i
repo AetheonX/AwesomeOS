@@ -1,0 +1,1 @@
+-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I C:\Development\Keil\ARM\RV31\Inc -I C:\Development\Keil\ARM\CMSIS\Include -I C:\Development\Keil\ARM\Inc\NXP\LPC17xx -o ".\FLASH\test_proc.o" --omf_browse ".\FLASH\test_proc.crf" --depend ".\FLASH\test_proc.d" "src\test_proc.c"
